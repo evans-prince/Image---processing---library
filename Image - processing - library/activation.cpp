@@ -31,7 +31,7 @@ void apply_relu(vector<vector<float> > &matrix){
     }
 }
 
-void apply_relu(vector<vector<float> > &matrix){
+void apply_tanh(vector<vector<float> > &matrix){
     /*
         function to apply the tanh activation function on the input matrix
     */
@@ -43,8 +43,4 @@ void apply_relu(vector<vector<float> > &matrix){
             matrix[i][j] = tanh(matrix[i][j]);
         }
     }
-}
-
-int main(){
-
 }
