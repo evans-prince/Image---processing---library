@@ -1,5 +1,6 @@
 #include <iostream>
 #include<vector>
+#include <activation.h>
 using namespace std;
 
 float ReLu(float x){
