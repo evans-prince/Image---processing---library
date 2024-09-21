@@ -14,12 +14,14 @@ vector<vector<int>> MaxPooling(vector<vector<int>> &matrix,int poolsize,int stri
     int h=matrix.size();
     int w=matrix[0].size();
     
+    //Calculate output dimensions
     int output_h=(h-poolsize)/stride + 1;
     int output_w=(h-poolsize)/stride + 1;
     
-    
+    //Initialize output matrix
     vector<vector<int>> pooledOutput(output_h,vector<int>(output_w,0));
     
+    //perform max pooling
     for(int i=0;i<=h-poolsize;i+=stride){
         for(int j=0;j<=w-poolsize;j+=stride){
             int maxVal=matrix[i][j];
@@ -40,12 +42,14 @@ vector<vector<int>> AvgPooling(vector<vector<int>> &matrix,int poolsize,int stri
     int h=matrix.size();
     int w=matrix[0].size();
     
+    //Calculate output dimensions
     int output_h=(h-poolsize)/stride + 1;
     int output_w=(h-poolsize)/stride + 1;
     
-    
+    //Initialize output matrix
     vector<vector<int>> pooledOutput(output_h,vector<int>(output_w,0));
     
+    //perform average pooling
     for(int i=0;i<=h-poolsize;i+=stride){
         for(int j=0;j<=w-poolsize;j+=stride){
             int sum=0;
@@ -58,6 +62,5 @@ vector<vector<int>> AvgPooling(vector<vector<int>> &matrix,int poolsize,int stri
         }
     }
     return pooledOutput;
-    
 };
 
