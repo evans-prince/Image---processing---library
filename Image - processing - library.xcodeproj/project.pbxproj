@@ -16,15 +16,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A3A807D72CA316E30050676A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A3A807AB2C9D4F910050676A /* Image - processing - library */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Image - processing - library"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A807D92CA316E30050676A /* fft_convolution */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = fft_convolution; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A3A807E12CA317570050676A /* Exceptions for "Image - processing - library" folder in "fft_convolution" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				src/fft_convolution.cpp,
+			);
+			target = A3A807D82CA316E30050676A /* fft_convolution */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A3A807AD2C9D4F910050676A /* Image - processing - library */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A3A807E12CA317570050676A /* Exceptions for "Image - processing - library" folder in "fft_convolution" target */,
+			);
 			path = "Image - processing - library";
 			sourceTree = "<group>";
 		};
@@ -32,6 +55,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		A3A807A82C9D4F910050676A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A807D62CA316E30050676A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A3A807AB2C9D4F910050676A /* Image - processing - library */,
+				A3A807D92CA316E30050676A /* fft_convolution */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +113,25 @@
 			productReference = A3A807AB2C9D4F910050676A /* Image - processing - library */;
 			productType = "com.apple.product-type.tool";
 		};
+		A3A807D82CA316E30050676A /* fft_convolution */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3A807DD2CA316E30050676A /* Build configuration list for PBXNativeTarget "fft_convolution" */;
+			buildPhases = (
+				A3A807D52CA316E30050676A /* Sources */,
+				A3A807D62CA316E30050676A /* Frameworks */,
+				A3A807D72CA316E30050676A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fft_convolution;
+			packageProductDependencies = (
+			);
+			productName = fft_convolution;
+			productReference = A3A807D92CA316E30050676A /* fft_convolution */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +142,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					A3A807AA2C9D4F910050676A = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A3A807D82CA316E30050676A = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -111,12 +164,20 @@
 			projectRoot = "";
 			targets = (
 				A3A807AA2C9D4F910050676A /* Image - processing - library */,
+				A3A807D82CA316E30050676A /* fft_convolution */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3A807A72C9D4F910050676A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A807D52CA316E30050676A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,6 +318,22 @@
 			};
 			name = Release;
 		};
+		A3A807DE2CA316E30050676A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3A807DF2CA316E30050676A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -274,6 +351,15 @@
 			buildConfigurations = (
 				A3A807B32C9D4F910050676A /* Debug */,
 				A3A807B42C9D4F910050676A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3A807DD2CA316E30050676A /* Build configuration list for PBXNativeTarget "fft_convolution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3A807DE2CA316E30050676A /* Debug */,
+				A3A807DF2CA316E30050676A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
