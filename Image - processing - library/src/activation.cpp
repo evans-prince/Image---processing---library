@@ -45,3 +45,22 @@ void apply_tanh(vector<vector<float> > &matrix){
         }
     }
 }
+
+
+vector <double> softmax(vector<double> &input) {
+    vector<double> softmaxOutput;
+    vector<double> exponents;
+
+    double denominator = 0;
+
+    for (int i = 0; i < input.size(); ++i) {
+        exponents.push_back(exp(input[i]));
+        denominator += exp(input[i]);
+    }
+
+    for (int i = 0; i < input.size(); ++i) {
+        softmaxOutput.push_back(exponents[i] / denominator);
+    }
+    return softmaxOutput;
+}
+
