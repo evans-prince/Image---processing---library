@@ -6,8 +6,8 @@
 //
 #include<iostream>
 #include<vector>
-#include "Pooling.hpp"
-
+#include "Pooling.h"
+#include <algorithm>
 using namespace std;
 
 vector<vector<int>> MaxPooling(vector<vector<int>> &matrix,int poolsize,int stride){
@@ -64,3 +64,44 @@ vector<vector<int>> AvgPooling(vector<vector<int>> &matrix,int poolsize,int stri
     return pooledOutput;
 };
 
+
+
+int main() {
+    // Input matrix
+    vector<vector<int>> matrix = {
+        {1, 3, 2, 1},
+        {4, 6, 8, 9},
+        {3, 5, 7, 2},
+        {8, 4, 6, 5}
+    };
+    
+    // Pool size and stride
+    int poolsize = 2;
+    int stride = 2;
+    
+//     Perform Max Pooling
+    vector<vector<int>> maxPooled = MaxPooling(matrix, poolsize, stride);
+    
+    // Perform Avg Pooling
+    vector<vector<int>> avgPooled = AvgPooling(matrix, poolsize, stride);
+    
+    // Output Max Pooling
+    cout << "Max Pooling Output:" << endl;
+    for (const auto& row : maxPooled) {
+        for (int val : row) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+    
+    // Output Avg Pooling
+    cout << "Average Pooling Output:" << endl;
+    for (const auto& row : avgPooled) {
+        for (int val : row) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}

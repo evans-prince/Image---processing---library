@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A3A807A92C9D4F910050676A /* CopyFiles */ = {
+		74826E002CA5D9FC0070A580 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -16,7 +16,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		A3A807D72CA316E30050676A /* CopyFiles */ = {
+		74826E0B2CA5DABA0070A580 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A3A807A92C9D4F910050676A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -28,40 +37,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		74826E022CA5D9FC0070A580 /* Pooling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Pooling; sourceTree = BUILT_PRODUCTS_DIR; };
+		74826E0D2CA5DABA0070A580 /* pooling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pooling; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A807AB2C9D4F910050676A /* Image - processing - library */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Image - processing - library"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3A807D92CA316E30050676A /* fft_convolution */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = fft_convolution; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A3A807E12CA317570050676A /* Exceptions for "Image - processing - library" folder in "fft_convolution" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				src/fft_convolution.cpp,
-			);
-			target = A3A807D82CA316E30050676A /* fft_convolution */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A3A807AD2C9D4F910050676A /* Image - processing - library */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A3A807E12CA317570050676A /* Exceptions for "Image - processing - library" folder in "fft_convolution" target */,
-			);
 			path = "Image - processing - library";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A3A807A82C9D4F910050676A /* Frameworks */ = {
+		74826DFF2CA5D9FC0070A580 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3A807D62CA316E30050676A /* Frameworks */ = {
+		74826E0A2CA5DABA0070A580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A807A82C9D4F910050676A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,7 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				A3A807AB2C9D4F910050676A /* Image - processing - library */,
-				A3A807D92CA316E30050676A /* fft_convolution */,
+				74826E022CA5D9FC0070A580 /* Pooling */,
+				74826E0D2CA5DABA0070A580 /* pooling */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +96,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		74826E012CA5D9FC0070A580 /* Pooling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74826E082CA5D9FC0070A580 /* Build configuration list for PBXNativeTarget "Pooling" */;
+			buildPhases = (
+				74826DFE2CA5D9FC0070A580 /* Sources */,
+				74826DFF2CA5D9FC0070A580 /* Frameworks */,
+				74826E002CA5D9FC0070A580 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pooling;
+			packageProductDependencies = (
+			);
+			productName = Pooling;
+			productReference = 74826E022CA5D9FC0070A580 /* Pooling */;
+			productType = "com.apple.product-type.tool";
+		};
+		74826E0C2CA5DABA0070A580 /* pooling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74826E112CA5DABA0070A580 /* Build configuration list for PBXNativeTarget "pooling" */;
+			buildPhases = (
+				74826E092CA5DABA0070A580 /* Sources */,
+				74826E0A2CA5DABA0070A580 /* Frameworks */,
+				74826E0B2CA5DABA0070A580 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pooling;
+			packageProductDependencies = (
+			);
+			productName = pooling;
+			productReference = 74826E0D2CA5DABA0070A580 /* pooling */;
+			productType = "com.apple.product-type.tool";
+		};
 		A3A807AA2C9D4F910050676A /* Image - processing - library */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3A807B22C9D4F910050676A /* Build configuration list for PBXNativeTarget "Image - processing - library" */;
@@ -113,25 +156,6 @@
 			productReference = A3A807AB2C9D4F910050676A /* Image - processing - library */;
 			productType = "com.apple.product-type.tool";
 		};
-		A3A807D82CA316E30050676A /* fft_convolution */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A3A807DD2CA316E30050676A /* Build configuration list for PBXNativeTarget "fft_convolution" */;
-			buildPhases = (
-				A3A807D52CA316E30050676A /* Sources */,
-				A3A807D62CA316E30050676A /* Frameworks */,
-				A3A807D72CA316E30050676A /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = fft_convolution;
-			packageProductDependencies = (
-			);
-			productName = fft_convolution;
-			productReference = A3A807D92CA316E30050676A /* fft_convolution */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,11 +165,15 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					A3A807AA2C9D4F910050676A = {
+					74826E012CA5D9FC0070A580 = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					A3A807D82CA316E30050676A = {
+					74826E0C2CA5DABA0070A580 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					A3A807AA2C9D4F910050676A = {
+						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
@@ -164,20 +192,28 @@
 			projectRoot = "";
 			targets = (
 				A3A807AA2C9D4F910050676A /* Image - processing - library */,
-				A3A807D82CA316E30050676A /* fft_convolution */,
+				74826E012CA5D9FC0070A580 /* Pooling */,
+				74826E0C2CA5DABA0070A580 /* pooling */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A3A807A72C9D4F910050676A /* Sources */ = {
+		74826DFE2CA5D9FC0070A580 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3A807D52CA316E30050676A /* Sources */ = {
+		74826E092CA5DABA0070A580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3A807A72C9D4F910050676A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,6 +223,46 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		74826E062CA5D9FC0070A580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSCNX8B9NW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74826E072CA5D9FC0070A580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSCNX8B9NW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		74826E122CA5DABA0070A580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSCNX8B9NW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74826E132CA5DABA0070A580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSCNX8B9NW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A3A807B02C9D4F910050676A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,38 +381,47 @@
 		A3A807B32C9D4F910050676A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Image - processing - library/include/Image - processing - library-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		A3A807B42C9D4F910050676A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A3A807DE2CA316E30050676A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A3A807DF2CA316E30050676A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Image - processing - library/include/Image - processing - library-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		74826E082CA5D9FC0070A580 /* Build configuration list for PBXNativeTarget "Pooling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74826E062CA5D9FC0070A580 /* Debug */,
+				74826E072CA5D9FC0070A580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74826E112CA5DABA0070A580 /* Build configuration list for PBXNativeTarget "pooling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74826E122CA5DABA0070A580 /* Debug */,
+				74826E132CA5DABA0070A580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A3A807A62C9D4F910050676A /* Build configuration list for PBXProject "Image - processing - library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -351,15 +436,6 @@
 			buildConfigurations = (
 				A3A807B32C9D4F910050676A /* Debug */,
 				A3A807B42C9D4F910050676A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A3A807DD2CA316E30050676A /* Build configuration list for PBXNativeTarget "fft_convolution" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A3A807DE2CA316E30050676A /* Debug */,
-				A3A807DF2CA316E30050676A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

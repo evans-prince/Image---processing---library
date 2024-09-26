@@ -6,7 +6,7 @@
 
 float ReLu(float x);
 
-float tanh(float x);
+float tanh_custom(float x);
 
 void apply_relu(std::vector<std::vector<float>>& matrix);
 

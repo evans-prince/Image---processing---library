@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <activation.h>
+#include "../include/activation.h"
 
 using namespace std;
 
