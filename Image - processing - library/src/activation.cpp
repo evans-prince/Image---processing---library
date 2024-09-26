@@ -1,6 +1,7 @@
 #include <iostream>
 #include<vector>
-#include <activation.h>
+#include <cmath>
+#include "../include/activation.h"
 using namespace std;
 
 float ReLu(float x){
@@ -10,12 +11,13 @@ float ReLu(float x){
     return x > 0 ? x : 0;
 }
 
-float tanh(float x){
+float tanh_custom(float x){
     /*
         tanh activation function
     */
-    float activated_x = (exp(x)-exp(-x))/(exp(x)-exp(-x));
-    return activated_x;
+    if (x > 20.0f) return 1.0f;
+    if (x < -20.0f) return -1.0f;
+    return (exp(x)-exp(-x))/(exp(x)+exp(-x));
 }
 
 void apply_relu(vector<vector<float> > &matrix){
@@ -41,17 +43,17 @@ void apply_tanh(vector<vector<float> > &matrix){
 
     for (int i = 0; i < m; i++){
         for (int j = 0; j < n; j++){
-            matrix[i][j] = tanh(matrix[i][j]);
+            matrix[i][j] = tanh_custom(matrix[i][j]);
         }
     }
 }
 
 
-vector <double> softmax(vector<double> &input) {
-    vector<double> softmaxOutput;
-    vector<double> exponents;
+vector <float> softmax(vector<float> &input) {
+    vector<float> softmaxOutput;
+    vector<float> exponents;
 
-    double denominator = 0;
+    float denominator = 0;
 
     for (int i = 0; i < input.size(); ++i) {
         exponents.push_back(exp(input[i]));
@@ -63,4 +65,30 @@ vector <double> softmax(vector<double> &input) {
     }
     return softmaxOutput;
 }
+                                                                         
+void printMatrix(vector<vector<float>> matrix) {
+    for (auto& row : matrix) {
+        for (auto& val : row) {
+            std::cout << val << " ";
+        }
+        std::cout << std::endl;
+    }
+}
 
+
+int main(){
+    vector<vector<float> > matrix1 = {
+        {-2,2,4},
+        {5.4,2.01,-99},
+        {1,2,7},
+    };
+    apply_relu(matrix1);
+    printMatrix(matrix1);
+    vector<vector<float>> matrix2 = {
+        {-2,2,4},
+        {5.4,2.01,-99},
+        {1,2,7},
+    };
+    apply_tanh(matrix2);
+    printMatrix(matrix2);
+}

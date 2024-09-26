@@ -1,20 +1,8 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
 #include <activation.h>
 
 using namespace std;
-
-vector<vector<float>> readMatrix(const string& filename){
-    ifstream file(filename);
-
-    if (!file.is_open()){
-        cerr << "Error: Could not open the file" << filename << endl;
-        exit(1);        
-    }
-
-    
-}
 
 void print_matrix(vector<vector<float>> matrix){
     int m = matrix.size();
@@ -29,5 +17,5 @@ void print_matrix(vector<vector<float>> matrix){
 }
 
 int main(){
-
+    
 }
