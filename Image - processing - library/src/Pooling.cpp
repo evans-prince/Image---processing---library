@@ -6,7 +6,7 @@
 //
 #include<iostream>
 #include<vector>
-#include "Pooling.h"
+#include "../include/Pooling.h"
 #include <algorithm>
 using namespace std;
 
