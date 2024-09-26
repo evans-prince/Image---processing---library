@@ -76,19 +76,20 @@ void printMatrix(vector<vector<float>> matrix) {
 }
 
 
-int main(){
-    vector<vector<float> > matrix1 = {
-        {-2,2,4},
-        {5.4,2.01,-99},
-        {1,2,7},
-    };
-    apply_relu(matrix1);
-    printMatrix(matrix1);
-    vector<vector<float>> matrix2 = {
-        {-2,2,4},
-        {5.4,2.01,-99},
-        {1,2,7},
-    };
-    apply_tanh(matrix2);
-    printMatrix(matrix2);
-}
+// int main(){
+//     vector<vector<float> > matrix1 = {
+//         {-2,2,4},
+//         {5.4,2.01,-99},
+//         {1,2,7},
+//     };
+//     apply_relu(matrix1);
+//     printMatrix(matrix1);
+//     vector<vector<float>> matrix2 = {
+//         {-2,2,4},
+//         {5.4,2.01,-99},
+//         {1,2,7},
+//     };
+//     apply_tanh(matrix2);
+//     printMatrix(matrix2);
+// }
+
