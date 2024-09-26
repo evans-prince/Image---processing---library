@@ -10,7 +10,11 @@
 #include <vector>
 #include <cmath>
 #include <complex>
-#include "fft_convolution.h"
+#include "../include/fft_convolution.h"
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 using namespace std;
 
@@ -125,23 +129,23 @@ Matrix fftConvolution(const Matrix& image, const Matrix& kernel){
 
 // to test convolution
 
-//int main() {
+// int main() {
 //    // Define a simple 3x3 image matrix
 //    Matrix image = {
 //        {1, 2, 3},
 //        {4, 5, 6},
 //        {7, 8, 9}
 //    };
-//
+
 //    // Define a simple 2x2 kernel
 //    Matrix kernel = {
 //        {0, 1},
 //        {1, 0}
 //    };
-//
+
 //    // Perform FFT convolution
 //    Matrix result = fftConvolution(image, kernel);
-//
+
 //    // Output the convolved image
 //    std::cout << "Convolved Image:" << std::endl;
 //    for (const auto& row : result) {
@@ -150,6 +154,6 @@ Matrix fftConvolution(const Matrix& image, const Matrix& kernel){
 //        }
 //        std::cout << std::endl; // New line for each row
 //    }
-//
+
 //    return 0;
-//}
+// }
